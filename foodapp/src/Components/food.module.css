@@ -1,0 +1,48 @@
+.container {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  margin: 30px;
+  overflow: hidden;
+  /* to hide images overflow */
+  font-family: "Courier New", Courier, monospace;
+  transition: transform 0.4s ease-out;
+}
+.container:hover {
+  transform: scale(1.1);
+}
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.imageinfo {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.name {
+  font-size: 1em;
+  font-weight: 723;
+  color: black;
+}
+.button {
+  background-color: rgb(73, 161, 136);
+  border: none;
+  color: white;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 14px;
+  border: 1.2px solid black;
+  transition: transform 0.3s ease-in-out;
+}
+.button:hover {
+  transform: scale(1.2);
+}
+.buttonContainer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

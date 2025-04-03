@@ -2,15 +2,26 @@ import { useState } from "react";
 import Search from "./Components/Search";
 import FoodItem from "./Components/FoodItems";
 import Nav from "./Components/Nav";
-import "./App.css"; 
+import "./App.css";
+import Container from "./Components/Container";
+import InnerContainer from "./Components/InnerContainer";
+import Fooddetail from "./Components/Fooddetail";
 function App() {
+  const [foodId, setFoodID] = useState("715415");
   const [foodItem, setFoodItem] = useState([]);
   return (
     <>
       <div>
         <Nav />
         <Search foodItem={foodItem} setFoodItem={setFoodItem} />
-        <FoodItem foodItem={foodItem} />
+        <Container>
+          <InnerContainer>
+            <FoodItem setFoodID={setFoodID} foodItem={foodItem} />
+          </InnerContainer>
+          <InnerContainer>
+            <Fooddetail foodId={foodId} />
+          </InnerContainer>
+        </Container>
       </div>
     </>
   );

@@ -1,5 +1,7 @@
 .recipe {
-  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 20px auto;
   background: linear-gradient(135deg, #8d99ae, #2b2d42);
   padding: 20px;
@@ -10,7 +12,14 @@
 .recipe:hover {
   transform: scale(1.002);
 }
-
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 .recipeName {
   font-size: 32px;
   text-align: center;
@@ -21,12 +30,18 @@
   /* font-size: 30px;*/
 }
 .recipeImage {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 200, 0, 0.03);
   /* max-width: 100%;
 */
+}
+.recipeImageDiv {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .recipeDetails {
   display: flex;

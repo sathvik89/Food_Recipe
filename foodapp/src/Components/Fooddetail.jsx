@@ -17,28 +17,31 @@ export default function Fooddetail({ foodId }) {
   }, [foodId]);
   // console.log(food);/
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <div className={styles.recipe}>
         <h1 className={styles.recipeName}>{food.title}</h1>
-        <img className={styles.recipeImage} src={food.image} alt="" />
+
+        <div className={styles.recipeImageDiv}>
+          <img className={styles.recipeImage} src={food.image} alt="" />
+        </div>
 
         <div className={styles.recipeDetails}>
           <span>
-            <strong>⏰ {food.readyInMinutes} Minutes</strong>
+            • <strong>⏰ {food.readyInMinutes} Minutes</strong>
           </span>
           <strong>
-            <span>👫🏻 Serves {food.servings}</span>
+            • <span>👫🏻 Serves {food.servings}</span>
           </strong>
           <strong>
             <span>
-              {food.vegetarian ? "🥬 Vegetarian" : "🥩 Non-Vegetarian"}
+              • {food.vegetarian ? "🥬 Vegetarian" : "🥩 Non-Vegetarian"}
             </span>
           </strong>
           <strong>
             <span>{food.vegan ? " Vegan" : ""}</span>
           </strong>
         </div>
-        <div>
+        <div className={styles.cost}>
           <span> 💲{Math.round(food.pricePerServing / 100)} Per serving</span>
         </div>
         <Foodingred food={food} loading={loading} />

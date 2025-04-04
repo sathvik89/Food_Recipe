@@ -6,7 +6,10 @@ export default function FoodItem({ foodItem, setFoodID }) {
         display: "flex",
         overflow: "scroll",
         flexWrap: "wrap",
-        height: "500px",
+        height: "450px",
+        border: "solid white",
+        borderRadius: "10px",
+        boxShadow: "0 4px 10px rgb(0,0,1,0.6)",
       }}
     >
       {foodItem.map((item) => {

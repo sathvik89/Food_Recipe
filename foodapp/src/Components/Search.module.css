@@ -5,8 +5,8 @@
   width: 300px;
 }
 .input {
-  width: 60%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 500px;
   padding: 12px;
   border: 2px solid #ffbe0b;
   border-radius: 5px;

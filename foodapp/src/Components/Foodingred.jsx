@@ -10,8 +10,6 @@ export default function Foodingred({ food, loading }) {
           <Item ingred={ingred} index={index} />
         ))
       )}
-      {/* {food.extendedIngredients &&
-       } */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ export default function Fooddetail({ foodId }) {
   const [food, setFood] = useState({});
   const [loading, setLoading] = useState(true);
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const APIkey = "2a2e9e3fc631411090d6c9632b469569";
+  const APIkey = "e3a4a49e876f44f69a5f709104430bfe";
   useEffect(() => {
     async function getFood() {
       const res = await fetch(`${URL}?apiKey=${APIkey}`);
@@ -40,7 +40,6 @@ export default function Fooddetail({ foodId }) {
         <div>
           <span> 💲{Math.round(food.pricePerServing / 100)} Per serving</span>
         </div>
-        <h2>Ingrediants</h2>
         {food.extendedIngredients.map((ingred) => (
           <div>
             <h3>{ingred.name}</h3>

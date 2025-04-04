@@ -15,6 +15,7 @@ export default function Search({ foodItem, setFoodItem }) {
   return (
     <div className={styles.searchContainer}>
       <input
+        placeholder="Search dish here... "
         className={styles.input}
         type="text"
         onChange={(e) => setQuery(e.target.value)}

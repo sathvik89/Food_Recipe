@@ -1,9 +1,11 @@
 .container {
   width: 300px;
   border-radius: 10px;
+  background: linear-gradient(135deg, #8d99ae, #61669a);
   box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
   margin: 30px;
   overflow: hidden;
+  padding: 2px;
   /* to hide images overflow */
   font-family: "Courier New", Courier, monospace;
   transition: transform 0.4s ease-out;
@@ -14,11 +16,15 @@
 .image {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .imageinfo {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  line-height: 1.6;
+  color: white;
+  background: linear-gradient(120deg, #06d6a0, #1b9aaa);
 }
 .name {
   font-size: 1em;
@@ -26,16 +32,15 @@
   color: black;
 }
 .button {
-  background-color: rgb(73, 161, 136);
+  background: linear-gradient(135deg, #ff006e, #d90429);
   border: none;
   color: white;
-  padding: 13px;
-  font-size: 14px;
-  font-weight: 400;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 14px;
-  border: 1.2px solid black;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 .button:hover {
   transform: scale(1.2);

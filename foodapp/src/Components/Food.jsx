@@ -10,7 +10,6 @@ export default function Food({ item, setFoodID }) {
         <button
           onClick={() => {
             setFoodID(item.id);
-            console.log(item.id);
           }}
           className={styles.button}
         >

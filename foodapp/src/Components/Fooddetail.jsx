@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Fooddetails.module.css";
+import Foodingred from "./foodingred";
 export default function Fooddetail({ foodId }) {
   const [food, setFood] = useState({});
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ export default function Fooddetail({ foodId }) {
     }
     getFood();
   }, [foodId]);
-  console.log(food);
+  // console.log(food);/
   return (
     <div>
       <div className={styles.recipe}>
@@ -40,20 +41,19 @@ export default function Fooddetail({ foodId }) {
         <div>
           <span> 💲{Math.round(food.pricePerServing / 100)} Per serving</span>
         </div>
-        {food.extendedIngredients.map((ingred) => (
-          <div>
-            <h3>{ingred.name}</h3>
-          </div>
-        ))}
+        <Foodingred food={food} loading={loading} />
+
         <h2>Instructions</h2>
         <div className={styles.recipeInstruction}>
           <ol>
             {loading ? (
               <p>Loading ...</p>
             ) : (
-              food.analyzedInstructions[0].steps.map((step) => {
-                return <li>{step.step}</li>;
-              })
+              food.analyzedInstructions &&
+              food.analyzedInstructions.length > 0 &&
+              food.analyzedInstructions[0].steps.map((step, index) => (
+                <li key={index}>{step.step}</li>
+              ))
             )}
           </ol>
         </div>

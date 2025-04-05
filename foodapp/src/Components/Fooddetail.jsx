@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Fooddetails.module.css";
-import Foodingred from "./foodingred";
+import Foodingred from "./Foodingred";
 export default function Fooddetail({ foodId }) {
   const [food, setFood] = useState({});
   const [loading, setLoading] = useState(true);
